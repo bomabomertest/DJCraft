@@ -1,0 +1,15 @@
+[package]
+name = "dj-cli"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[[bin]]
+name = "dj"
+path = "src/main.rs"
+
+[dependencies]
+dj-core = { path = "../dj-core" }
+dj-analysis = { path = "../dj-analysis" }
+dj-stems = { path = "../dj-stems" }
+symphonia = { version = "0.5", features = ["mp3", "flac", "wav", "aac", "isomp4", "ogg", "vorbis", "pcm"] }
